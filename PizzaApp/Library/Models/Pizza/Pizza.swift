@@ -14,12 +14,56 @@ struct Pizza: Codable {
     var ingredients: [Int]
     let imageUrl: String?
     
+    func price(forIngredients ingredientList: [Ingredient]) -> Double {
+        var price: Double = 0
+        
+        for ingredientId in ingredients {
+            for ingredient in ingredientList where ingredient.id == ingredientId {
+                price += ingredient.price
+            }
+        }
+        
+        return price
+    }
+    
+    func ingredients(forIngredients ingredientList: [Ingredient]) -> [Ingredient] {
+        var pizzaIngredients = [Ingredient]()
+        
+        for ingredientId in ingredients {
+            for ingredient in ingredientList where ingredient.id == ingredientId {
+                pizzaIngredients.append(ingredient)
+            }
+        }
+        
+        return pizzaIngredients
+    }
+    
+    func ingredientNames(forIngredients ingredientList: [Ingredient]) -> String {
+        var names = ""
+        
+        let pizzaIngredients = ingredients(forIngredients: ingredientList)
+        
+        for pizzaIngredient in pizzaIngredients {
+            if names.count > 0 {
+                names.append(", ")
+            }
+            
+            names.append(pizzaIngredient.name)
+        }
+        
+        return names
+    }
+    
 }
 
 struct PizzaPayload: Codable {
     
     let pizzas: [Pizza]
     let basePrice: Double
+    
+    func price(forPizza pizza: Pizza, withIngredients ingredientList: [Ingredient]) -> Double {
+        return basePrice + pizza.price(forIngredients: ingredientList)
+    }
     
 }
 

@@ -42,5 +42,29 @@ class PizzaTests: XCTestCase {
             XCTAssertEqual(error as? AwesomeParserError, AwesomeParserError.invalidPayload)
         }
     }
+    
+    func testPrice() {
+        guard let ingredientsData = MockJSONLoader.loadJSONData(file: "ingredients", usingClass: self) else {
+            XCTFail("a json FILE is needed in order to proceed with the test")
+            return
+        }
+        
+        guard let pizzasData = MockJSONLoader.loadJSONData(file: "pizzas", usingClass: self) else {
+            XCTFail("a json FILE is needed in order to proceed with the test")
+            return
+        }
+        
+        do {
+            let ingredients = try Ingredient.parseArray(ingredientsData)
+            let pizzaPayload = try PizzaPayload.parse(pizzasData)
+            
+            let pizza = Pizza(name: "Margherita", ingredients: [1, 2], imageUrl: "")
+            XCTAssertEqual(pizza.price(forIngredients: ingredients), 1.5)
+            
+            //XCTAssertEqual(pizzaPayload.price(forPizza: pizza, ), <#T##expression2: Equatable##Equatable#>)
+        } catch {
+            XCTFail("Failed to parse ingredients")
+        }
+    }
 
 }

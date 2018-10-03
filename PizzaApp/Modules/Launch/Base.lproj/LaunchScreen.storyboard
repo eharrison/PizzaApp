@@ -17,14 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_wood" translatesAutoresizingMaskIntoConstraints="NO" id="txB-g3-iw3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenno's Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEg-Gz-obg">
-                                <rect key="frame" x="106" y="347.5" width="163.5" height="32.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="83" y="342.5" width="209" height="42"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.49803921568627452" blue="0.16078431372549018" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="N2l-sI-k20">
-                                <rect key="frame" x="67.5" y="141.5" width="240" height="198"/>
+                                <rect key="frame" x="67.5" y="136.5" width="240" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="fRW-Ti-gSH"/>
                                     <constraint firstAttribute="height" constant="198" id="g9R-hX-kha"/>
@@ -34,7 +37,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EEg-Gz-obg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="30" id="6dm-tO-4oT"/>
+                            <constraint firstItem="txB-g3-iw3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dgw-6W-V4O"/>
+                            <constraint firstItem="txB-g3-iw3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fi2-Ne-0L7"/>
+                            <constraint firstItem="txB-g3-iw3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Uum-qx-ZSX"/>
                             <constraint firstItem="EEg-Gz-obg" firstAttribute="top" secondItem="N2l-sI-k20" secondAttribute="bottom" constant="8" id="dVg-WM-S6R"/>
+                            <constraint firstItem="txB-g3-iw3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="k6M-Vb-uAk"/>
                             <constraint firstItem="N2l-sI-k20" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qWd-H6-E08"/>
                             <constraint firstItem="EEg-Gz-obg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="w6W-Dg-0DH"/>
                         </constraints>
@@ -47,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_wood" width="1440" height="1216"/>
         <image name="pizza" width="1000" height="971"/>
     </resources>
 </document>
