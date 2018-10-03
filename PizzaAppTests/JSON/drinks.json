@@ -1,0 +1,27 @@
+[
+  {
+    "price": 1,
+    "name": "Still Water",
+    "id": 1
+  },
+  {
+    "price": 1.5,
+    "name": "Sparkling Water",
+    "id": 2
+  },
+  {
+    "price": 2.5,
+    "name": "Coke",
+    "id": 3
+  },
+  {
+    "price": 3,
+    "name": "Beer",
+    "id": 4
+  },
+  {
+    "price": 4,
+    "name": "Red Wine",
+    "id": 5
+  }
+]

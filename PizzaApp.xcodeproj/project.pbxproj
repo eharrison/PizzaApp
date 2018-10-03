@@ -8,11 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0A9E57C92164C04D004E0C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57C82164C04D004E0C36 /* AppDelegate.swift */; };
-		0A9E57CB2164C04D004E0C36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57CA2164C04D004E0C36 /* ViewController.swift */; };
 		0A9E57CE2164C04D004E0C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57CC2164C04D004E0C36 /* Main.storyboard */; };
 		0A9E57D02164C04E004E0C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57CF2164C04E004E0C36 /* Assets.xcassets */; };
 		0A9E57D32164C04E004E0C36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57D12164C04E004E0C36 /* LaunchScreen.storyboard */; };
 		0A9E57DE2164C04E004E0C36 /* PizzaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57DD2164C04E004E0C36 /* PizzaAppTests.swift */; };
+		0A9E57F22164C0C5004E0C36 /* drinks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57EF2164C0C5004E0C36 /* drinks.json */; };
+		0A9E57F32164C0C5004E0C36 /* pizzas.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57F02164C0C5004E0C36 /* pizzas.json */; };
+		0A9E57F42164C0C5004E0C36 /* ingredients.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E57F12164C0C5004E0C36 /* ingredients.json */; };
+		0A9E58082164C401004E0C36 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57F82164C401004E0C36 /* ObjectAssociation.swift */; };
+		0A9E58092164C401004E0C36 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57F92164C401004E0C36 /* UIViewControllerExtensions.swift */; };
+		0A9E580A2164C401004E0C36 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57FA2164C401004E0C36 /* UIImageExtensions.swift */; };
+		0A9E580B2164C401004E0C36 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57FB2164C401004E0C36 /* UIViewExtensions.swift */; };
+		0A9E580C2164C401004E0C36 /* AwesomeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E57FD2164C401004E0C36 /* AwesomeRequester.swift */; };
+		0A9E58122164C401004E0C36 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58062164C401004E0C36 /* ShimmerView.swift */; };
+		0A9E58132164C401004E0C36 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58072164C401004E0C36 /* ShimmerEffect.swift */; };
+		0A9E58172164C498004E0C36 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58162164C498004E0C36 /* Ingredient.swift */; };
+		0A9E581A2164C63D004E0C36 /* IngredientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58192164C63D004E0C36 /* IngredientTests.swift */; };
+		0A9E581C2164C6B5004E0C36 /* MockJSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E581B2164C6B5004E0C36 /* MockJSONLoader.swift */; };
+		0A9E58222164C872004E0C36 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58212164C872004E0C36 /* Drink.swift */; };
+		0A9E58242164C87A004E0C36 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58232164C87A004E0C36 /* Pizza.swift */; };
+		0A9E58262164C882004E0C36 /* PizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58252164C882004E0C36 /* PizzaTests.swift */; };
+		0A9E58282164C88B004E0C36 /* DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58272164C88B004E0C36 /* DrinkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +44,6 @@
 /* Begin PBXFileReference section */
 		0A9E57C52164C04D004E0C36 /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9E57C82164C04D004E0C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A9E57CA2164C04D004E0C36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A9E57CD2164C04D004E0C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A9E57CF2164C04E004E0C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A9E57D22164C04E004E0C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +51,23 @@
 		0A9E57D92164C04E004E0C36 /* PizzaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9E57DD2164C04E004E0C36 /* PizzaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaAppTests.swift; sourceTree = "<group>"; };
 		0A9E57DF2164C04E004E0C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A9E57EF2164C0C5004E0C36 /* drinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		0A9E57F02164C0C5004E0C36 /* pizzas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizzas.json; sourceTree = "<group>"; };
+		0A9E57F12164C0C5004E0C36 /* ingredients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ingredients.json; sourceTree = "<group>"; };
+		0A9E57F82164C401004E0C36 /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		0A9E57F92164C401004E0C36 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		0A9E57FA2164C401004E0C36 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		0A9E57FB2164C401004E0C36 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0A9E57FD2164C401004E0C36 /* AwesomeRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeRequester.swift; sourceTree = "<group>"; };
+		0A9E58062164C401004E0C36 /* ShimmerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
+		0A9E58072164C401004E0C36 /* ShimmerEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		0A9E58162164C498004E0C36 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		0A9E58192164C63D004E0C36 /* IngredientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTests.swift; sourceTree = "<group>"; };
+		0A9E581B2164C6B5004E0C36 /* MockJSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockJSONLoader.swift; sourceTree = "<group>"; };
+		0A9E58212164C872004E0C36 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		0A9E58232164C87A004E0C36 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		0A9E58252164C882004E0C36 /* PizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTests.swift; sourceTree = "<group>"; };
+		0A9E58272164C88B004E0C36 /* DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +109,10 @@
 		0A9E57C72164C04D004E0C36 /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
-				0A9E57C82164C04D004E0C36 /* AppDelegate.swift */,
-				0A9E57CA2164C04D004E0C36 /* ViewController.swift */,
-				0A9E57CC2164C04D004E0C36 /* Main.storyboard */,
-				0A9E57CF2164C04E004E0C36 /* Assets.xcassets */,
-				0A9E57D12164C04E004E0C36 /* LaunchScreen.storyboard */,
-				0A9E57D42164C04E004E0C36 /* Info.plist */,
+				0A9E57E82164C056004E0C36 /* Modules */,
+				0A9E57E92164C05C004E0C36 /* Library */,
+				0A9E57EA2164C062004E0C36 /* Assets */,
+				0A9E57EB2164C068004E0C36 /* Supporting Files */,
 			);
 			path = PizzaApp;
 			sourceTree = "<group>";
@@ -90,10 +120,140 @@
 		0A9E57DC2164C04E004E0C36 /* PizzaAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A9E581B2164C6B5004E0C36 /* MockJSONLoader.swift */,
+				0A9E57EE2164C0B6004E0C36 /* JSON */,
 				0A9E57DD2164C04E004E0C36 /* PizzaAppTests.swift */,
 				0A9E57DF2164C04E004E0C36 /* Info.plist */,
 			);
 			path = PizzaAppTests;
+			sourceTree = "<group>";
+		};
+		0A9E57E82164C056004E0C36 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57ED2164C0A9004E0C36 /* Main */,
+				0A9E57EC2164C07F004E0C36 /* Launch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0A9E57E92164C05C004E0C36 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58182164C4D5004E0C36 /* Models */,
+				0A9E57F72164C401004E0C36 /* Extensions */,
+				0A9E57FC2164C401004E0C36 /* Networking */,
+				0A9E58052164C401004E0C36 /* Shimmering */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		0A9E57EA2164C062004E0C36 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57CF2164C04E004E0C36 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0A9E57EB2164C068004E0C36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57C82164C04D004E0C36 /* AppDelegate.swift */,
+				0A9E57D42164C04E004E0C36 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A9E57EC2164C07F004E0C36 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57D12164C04E004E0C36 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		0A9E57ED2164C0A9004E0C36 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57CC2164C04D004E0C36 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0A9E57EE2164C0B6004E0C36 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57EF2164C0C5004E0C36 /* drinks.json */,
+				0A9E57F12164C0C5004E0C36 /* ingredients.json */,
+				0A9E57F02164C0C5004E0C36 /* pizzas.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		0A9E57F72164C401004E0C36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57F82164C401004E0C36 /* ObjectAssociation.swift */,
+				0A9E57F92164C401004E0C36 /* UIViewControllerExtensions.swift */,
+				0A9E57FA2164C401004E0C36 /* UIImageExtensions.swift */,
+				0A9E57FB2164C401004E0C36 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A9E57FC2164C401004E0C36 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E57FD2164C401004E0C36 /* AwesomeRequester.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0A9E58052164C401004E0C36 /* Shimmering */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58062164C401004E0C36 /* ShimmerView.swift */,
+				0A9E58072164C401004E0C36 /* ShimmerEffect.swift */,
+			);
+			path = Shimmering;
+			sourceTree = "<group>";
+		};
+		0A9E58182164C4D5004E0C36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E581E2164C851004E0C36 /* Ingredient */,
+				0A9E58202164C860004E0C36 /* Drink */,
+				0A9E581F2164C85C004E0C36 /* Pizza */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A9E581E2164C851004E0C36 /* Ingredient */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58162164C498004E0C36 /* Ingredient.swift */,
+				0A9E58192164C63D004E0C36 /* IngredientTests.swift */,
+			);
+			path = Ingredient;
+			sourceTree = "<group>";
+		};
+		0A9E581F2164C85C004E0C36 /* Pizza */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58232164C87A004E0C36 /* Pizza.swift */,
+				0A9E58252164C882004E0C36 /* PizzaTests.swift */,
+			);
+			path = Pizza;
+			sourceTree = "<group>";
+		};
+		0A9E58202164C860004E0C36 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58212164C872004E0C36 /* Drink.swift */,
+				0A9E58272164C88B004E0C36 /* DrinkTests.swift */,
+			);
+			path = Drink;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +347,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9E57F32164C0C5004E0C36 /* pizzas.json in Resources */,
+				0A9E57F42164C0C5004E0C36 /* ingredients.json in Resources */,
+				0A9E57F22164C0C5004E0C36 /* drinks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +360,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9E57CB2164C04D004E0C36 /* ViewController.swift in Sources */,
+				0A9E58122164C401004E0C36 /* ShimmerView.swift in Sources */,
+				0A9E58172164C498004E0C36 /* Ingredient.swift in Sources */,
+				0A9E580C2164C401004E0C36 /* AwesomeRequester.swift in Sources */,
+				0A9E58082164C401004E0C36 /* ObjectAssociation.swift in Sources */,
+				0A9E58242164C87A004E0C36 /* Pizza.swift in Sources */,
+				0A9E580B2164C401004E0C36 /* UIViewExtensions.swift in Sources */,
+				0A9E58132164C401004E0C36 /* ShimmerEffect.swift in Sources */,
+				0A9E58092164C401004E0C36 /* UIViewControllerExtensions.swift in Sources */,
 				0A9E57C92164C04D004E0C36 /* AppDelegate.swift in Sources */,
+				0A9E58222164C872004E0C36 /* Drink.swift in Sources */,
+				0A9E580A2164C401004E0C36 /* UIImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +378,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9E58262164C882004E0C36 /* PizzaTests.swift in Sources */,
+				0A9E58282164C88B004E0C36 /* DrinkTests.swift in Sources */,
+				0A9E581A2164C63D004E0C36 /* IngredientTests.swift in Sources */,
 				0A9E57DE2164C04E004E0C36 /* PizzaAppTests.swift in Sources */,
+				0A9E581C2164C6B5004E0C36 /* MockJSONLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
