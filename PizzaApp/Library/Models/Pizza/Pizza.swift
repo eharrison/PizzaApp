@@ -11,7 +11,7 @@ import Foundation
 struct Pizza: Codable {
     
     let name: String
-    let ingredients: [Int]
+    var ingredients: [Int]
     let imageUrl: String?
     
 }
