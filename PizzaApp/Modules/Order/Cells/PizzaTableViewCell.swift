@@ -34,6 +34,7 @@ class PizzaTableViewCell: UITableViewCell {
     // MARK: - Events
 
     @IBAction func addToCart(_ sender: Any) {
+        addToCartCallback?()
     }
     
 }

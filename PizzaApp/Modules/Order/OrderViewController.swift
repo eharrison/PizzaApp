@@ -30,7 +30,14 @@ class OrderViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let viewController = segue.destination as? PizzaDetailsViewController {
+            viewController.viewModel.pizzaPayload = viewModel.pizzaPayload
+            viewController.viewModel.ingredients = viewModel.ingredients
+            
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                viewController.viewModel.pizza = viewModel.pizza(forIndexPath: indexPath)
+            }
+        }
     }
     
 }

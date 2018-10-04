@@ -30,8 +30,8 @@ protocol OrderViewControllerModelDelegate: class {
 public class OrderViewControllerModel: NSObject {
     
     fileprivate var cells: [OrderCellObject] = []
-    fileprivate var pizzaPayload: PizzaPayload?
-    fileprivate var ingredients: [Ingredient] = []
+    var pizzaPayload: PizzaPayload?
+    var ingredients: [Ingredient] = []
     
     weak var delegate: OrderViewControllerModelDelegate?
     
@@ -89,6 +89,10 @@ public class OrderViewControllerModel: NSObject {
         return cells
     }
     
+    func pizza(forIndexPath indexPath: IndexPath) -> Pizza? {
+        return cells[indexPath.row].pizza
+    }
+    
 }
 
 // MARK: - Table view data source
@@ -117,6 +121,12 @@ extension OrderViewControllerModel: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? PizzaTableViewCell {
+            cell.coverImageView.setImage(cells[indexPath.row].pizza?.imageUrl)
+        }
     }
     
     // MARK: - Dimensions

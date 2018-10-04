@@ -26,6 +26,10 @@ struct Pizza: Codable {
         return price
     }
     
+    func hasIngredient(withId id: Int) -> Bool {
+        return ingredients.contains(id)
+    }
+    
     func ingredients(forIngredients ingredientList: [Ingredient]) -> [Ingredient] {
         var pizzaIngredients = [Ingredient]()
         

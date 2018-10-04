@@ -61,7 +61,25 @@ class PizzaTests: XCTestCase {
             let pizza = Pizza(name: "Margherita", ingredients: [1, 2], imageUrl: "")
             XCTAssertEqual(pizza.price(forIngredients: ingredients), 1.5)
             
-            //XCTAssertEqual(pizzaPayload.price(forPizza: pizza, ), <#T##expression2: Equatable##Equatable#>)
+            XCTAssertEqual(pizzaPayload.price(forPizza: pizza, withIngredients: ingredients), 5.5)
+        } catch {
+            XCTFail("Failed to parse ingredients")
+        }
+    }
+    
+    func testIngredients() {
+        guard let ingredientsData = MockJSONLoader.loadJSONData(file: "ingredients", usingClass: self) else {
+            XCTFail("a json FILE is needed in order to proceed with the test")
+            return
+        }
+        
+        do {
+            let ingredients = try Ingredient.parseArray(ingredientsData)
+            let pizza = Pizza(name: "Margherita", ingredients: [1, 2], imageUrl: "")
+            XCTAssertEqual(pizza.ingredientNames(forIngredients: ingredients), "Mozzarella, Tomato Sauce")
+            XCTAssertTrue(pizza.hasIngredient(withId: 1))
+            XCTAssertTrue(pizza.hasIngredient(withId: 2))
+            XCTAssertFalse(pizza.hasIngredient(withId: 3))
         } catch {
             XCTFail("Failed to parse ingredients")
         }
