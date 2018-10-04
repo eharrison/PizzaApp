@@ -63,13 +63,9 @@ extension Order {
                         return
                     }
                     
-                    /*do {
-                     let ingredients = try Ingredient.parseArray(data)
-                     completion(true)
-                     } catch {
-                     print("Invalid payload")
-                     completion(false)
-                     }*/
+                    print("Response [\(String(data: data, encoding: .utf8) ?? "")]")
+                    
+                    completion(true)
                 }
             }
         } catch {

@@ -96,7 +96,7 @@ public class PizzaDetailsViewControllerModel: NSObject {
     }
     
     func addToCart() {
-        Cart.shared.items.append(CartItem(name: title, price: pizzaPrice, ingredients: ingredients))
+        Cart.shared.items.append(CartItem(name: title, price: pizzaPrice, object: pizza, ingredients: ingredients))
     }
     
 }

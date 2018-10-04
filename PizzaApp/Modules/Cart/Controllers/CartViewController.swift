@@ -43,6 +43,17 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func checkout(_ sender: Any) {
+        Cart.shared.processOrder { [weak self] (success) in
+            guard success else {
+                self?.showAlert(withTitle: "Failed", message: "Something went wrong.", buttons: (UIAlertAction.Style.default, "Ok", nil))
+                return
+            }
+            
+            self?.showAlert(withTitle: "Success", message: "Your order has been placed.", buttons: (UIAlertAction.Style.default, "Ok", ( {
+                Cart.shared.items.removeAll()
+                self?.navigationController?.popViewController(animated: true)
+            })))
+        }
     }
     
 }
