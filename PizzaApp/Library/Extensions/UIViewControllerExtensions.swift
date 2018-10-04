@@ -41,7 +41,7 @@ extension UIViewController: SFSafariViewControllerDelegate {
             return
         }
         
-        if #available(iOS 8.0, *){
+        if #available(iOS 8.0, *) {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             //alertController.modalPresentationStyle = isPad ? .popover : .currentContext
             
@@ -52,7 +52,7 @@ extension UIViewController: SFSafariViewControllerDelegate {
                 })
             }
             self.present(alertController, animated: true, completion: nil)
-        }else {
+        } else {
             // Handle prior iOS Versions
             
         }
