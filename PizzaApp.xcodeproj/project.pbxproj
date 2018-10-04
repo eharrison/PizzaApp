@@ -45,6 +45,7 @@
 		0A9E58582165E5F8004E0C36 /* CartViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58572165E5F8004E0C36 /* CartViewControllerModel.swift */; };
 		0A9E585A2165E77A004E0C36 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58592165E77A004E0C36 /* CartItemTableViewCell.swift */; };
 		0A9E585C2165EA72004E0C36 /* CartTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E585B2165EA72004E0C36 /* CartTotalTableViewCell.swift */; };
+		0A9E585F2165EBA2004E0C36 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E585E2165EBA2004E0C36 /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		0A9E58572165E5F8004E0C36 /* CartViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerModel.swift; sourceTree = "<group>"; };
 		0A9E58592165E77A004E0C36 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E585B2165EA72004E0C36 /* CartTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalTableViewCell.swift; sourceTree = "<group>"; };
+		0A9E585E2165EBA2004E0C36 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 		0A9E58182164C4D5004E0C36 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A9E585D2165EB99004E0C36 /* Cart */,
 				0A9E58292164CC4A004E0C36 /* Order */,
 				0A9E581E2164C851004E0C36 /* Ingredient */,
 				0A9E58202164C860004E0C36 /* Drink */,
@@ -376,6 +379,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0A9E585D2165EB99004E0C36 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E585E2165EBA2004E0C36 /* Cart.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,6 +495,7 @@
 			files = (
 				0A9E58402165C42E004E0C36 /* IngredientTableViewCell.swift in Sources */,
 				0A9E58122164C401004E0C36 /* ShimmerView.swift in Sources */,
+				0A9E585F2165EBA2004E0C36 /* Cart.swift in Sources */,
 				0A9E58172164C498004E0C36 /* Ingredient.swift in Sources */,
 				0A9E58492165CB59004E0C36 /* PizzaDetailsViewController.swift in Sources */,
 				0A9E580C2164C401004E0C36 /* AwesomeRequester.swift in Sources */,

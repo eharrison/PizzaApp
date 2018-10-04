@@ -178,7 +178,7 @@
                     <navigationItem key="navigationItem" title="Nenno's Pizza" id="pfz-m6-ON1">
                         <barButtonItem key="leftBarButtonItem" image="ic_cart_navbar" id="OLa-0Y-lXl">
                             <connections>
-                                <segue destination="st8-7a-u6t" kind="show" id="0pj-eG-vFQ"/>
+                                <segue destination="st8-7a-u6t" kind="show" identifier="cart" id="0pj-eG-vFQ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mI0-Hh-kuA">

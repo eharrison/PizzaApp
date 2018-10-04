@@ -22,7 +22,7 @@ class PizzaDetailsViewController: UIViewController {
         tableView.delegate = viewModel
         viewModel.delegate = self
         
-        title = viewModel.pizza?.name ?? "Custom Pizza"
+        title = viewModel.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,15 +31,10 @@ class PizzaDetailsViewController: UIViewController {
         viewModel.refreshContent(withTableView: tableView)
     }
     
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
     // MARK: - Events
     
     @IBAction func addToCart(_ sender: Any) {
+        viewModel.addToCart()
     }
     
 }

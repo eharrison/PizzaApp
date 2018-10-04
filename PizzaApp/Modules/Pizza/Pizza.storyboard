@@ -134,6 +134,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addToCart:" destination="SFv-xi-7zZ" eventType="touchUpInside" id="H54-KZ-183"/>
+                                    <segue destination="ice-eA-NWV" kind="unwind" unwindAction="addedToCart:" id="cju-YA-bMC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,6 +157,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyt-20-GdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ice-eA-NWV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="805.60000000000002" y="124.58770614692655"/>
         </scene>

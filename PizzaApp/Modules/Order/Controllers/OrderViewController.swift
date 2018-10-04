@@ -39,6 +39,15 @@ class OrderViewController: UIViewController {
             if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
                 viewController.viewModel.pizza = viewModel.pizza(forIndexPath: indexPath)
             }
+        } else if let viewController = segue.destination as? CartViewController {
+            viewController.viewModel.pizzaPayload = viewModel.pizzaPayload
+            viewController.viewModel.ingredients = viewModel.ingredients
+        }
+    }
+    
+    @IBAction func addedToCart(_ segue: UIStoryboardSegue) {
+        if segue.source is PizzaDetailsViewController {
+            performSegue(withIdentifier: "cart", sender: self)
         }
     }
     

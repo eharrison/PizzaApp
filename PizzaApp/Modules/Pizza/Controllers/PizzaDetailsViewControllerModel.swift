@@ -37,6 +37,10 @@ public class PizzaDetailsViewControllerModel: NSObject {
     var pizza: Pizza?
     var ingredients: [Ingredient] = []
     
+    var title: String {
+        return pizza?.name ?? "Custom Pizza"
+    }
+    
     weak var delegate: PizzaDetailsViewControllerModelDelegate?
     
     func refreshContent(withTableView tableView: UITableView) {
@@ -65,6 +69,18 @@ public class PizzaDetailsViewControllerModel: NSObject {
         return cells
     }
     
+    var selectedIngredients: [Ingredient] {
+        var ingredients: [Ingredient] = []
+        
+        for cell in cells where cell.selected {
+            if let ingredient = cell.ingredient {
+                ingredients.append(ingredient)
+            }
+        }
+        
+        return ingredients
+    }
+    
     var selectedIngredientsPrice: Double {
         var price: Double = 0
         
@@ -77,6 +93,10 @@ public class PizzaDetailsViewControllerModel: NSObject {
     
     var pizzaPrice: Double {
         return (pizzaPayload?.basePrice ?? 0) + selectedIngredientsPrice
+    }
+    
+    func addToCart() {
+        Cart.shared.items.append(CartItem(name: title, price: pizzaPrice, ingredients: ingredients))
     }
     
 }

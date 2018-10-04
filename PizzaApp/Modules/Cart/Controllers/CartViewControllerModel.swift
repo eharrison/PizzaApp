@@ -15,9 +15,9 @@ fileprivate enum CartCellType: String {
 
 fileprivate struct CartCellObject {
     var type: CartCellType = .item
-    var item: Ingredient?
+    var item: CartItem?
     
-    init(type: CartCellType, item: Ingredient? = nil) {
+    init(type: CartCellType, item: CartItem? = nil) {
         self.type = type
         self.item = item
     }
@@ -49,6 +49,9 @@ public class CartViewControllerModel: NSObject {
         var cells = [CartCellObject]()
         
         // add cells
+        for item in Cart.shared.items {
+            cells.append(CartCellObject(type: .item, item: item))
+        }
         
         cells.append(CartCellObject(type: .total))
         
@@ -76,9 +79,11 @@ extension CartViewControllerModel: UITableViewDelegate, UITableViewDataSource {
             cell.nameLabel.text = cells[indexPath.row].item?.name
             cell.priceLabel.text = "$\(cells[indexPath.row].item?.price ?? 0)"
             cell.deleteCallback = { [weak self] in
-                self?.cells.remove(at: indexPath.row)
-                tableView.reloadData()
+                Cart.shared.items.remove(at: indexPath.row)
+                self?.refreshContent(withTableView: tableView)
             }
+        } else if let cell = cell as? CartTotalTableViewCell {
+            cell.priceLabel.text = "$\(Cart.shared.total)"
         }
         
         return cell
