@@ -39,10 +39,15 @@ class CartViewController: UIViewController {
     // MARK: - Events
     
     @IBAction func addDrink(_ sender: Any) {
-        
+        showAlert(message: "Feature not implemented.", buttons: (UIAlertAction.Style.default, "Ok", nil))
     }
     
     @IBAction func checkout(_ sender: Any) {
+        guard Cart.shared.items.count > 0 else {
+            showAlert(message: "Cart is empty.", buttons: (UIAlertAction.Style.default, "Ok", nil))
+            return
+        }
+        
         Cart.shared.processOrder { [weak self] (success) in
             guard success else {
                 self?.showAlert(withTitle: "Failed", message: "Something went wrong.", buttons: (UIAlertAction.Style.default, "Ok", nil))
