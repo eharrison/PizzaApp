@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2G6-1V-Mqu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart-->
+        <scene sceneID="4Al-1Y-DdY">
+            <objects>
+                <viewController storyboardIdentifier="PizzaDetailsViewController" id="2G6-1V-Mqu" customClass="CartViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HdG-G2-9s8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vfm-hR-Lhc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Mdz-ee-YnP">
+                                    <rect key="frame" x="0.0" y="128" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="item" rowHeight="40" id="RLW-IV-AOv" customClass="CartItemTableViewCell" customModule="PizzaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RLW-IV-AOv" id="SIi-gE-2ZY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-VU-8Cf">
+                                                    <rect key="frame" x="20" y="5" width="335" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmo-I5-URt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44" id="vnK-Ag-deY"/>
+                                                            </constraints>
+                                                            <state key="normal" title="X">
+                                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="deleteItem:" destination="RLW-IV-AOv" eventType="touchUpInside" id="ktg-Bk-H9V"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mozzarela" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-3b-qx3">
+                                                            <rect key="frame" x="52" y="0.0" width="106.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zi-iW-7v3">
+                                                            <rect key="frame" x="166.5" y="0.0" width="168.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Ue-VU-8Cf" firstAttribute="centerY" secondItem="SIi-gE-2ZY" secondAttribute="centerY" id="MXs-6L-kPo"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Ue-VU-8Cf" secondAttribute="trailing" constant="20" id="cXS-Ij-eIH"/>
+                                                <constraint firstItem="9Ue-VU-8Cf" firstAttribute="leading" secondItem="SIi-gE-2ZY" secondAttribute="leading" constant="20" id="g6I-mi-WVM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteButton" destination="jmo-I5-URt" id="IsA-j0-89B"/>
+                                            <outlet property="nameLabel" destination="Hgx-3b-qx3" id="Mn2-UE-Sd8"/>
+                                            <outlet property="priceLabel" destination="6Zi-iW-7v3" id="yUZ-7M-QnZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="total" rowHeight="60" id="chg-aD-IEA" customClass="CartTotalTableViewCell" customModule="PizzaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="68" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="chg-aD-IEA" id="mfb-dh-nOv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cGa-KQ-GjE">
+                                                    <rect key="frame" x="20" y="18.5" width="335" height="23"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2A-OV-vCV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="23"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhF-Ds-ukk">
+                                                            <rect key="frame" x="171.5" y="0.0" width="163.5" height="23"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cGa-KQ-GjE" firstAttribute="centerY" secondItem="mfb-dh-nOv" secondAttribute="centerY" id="4oh-Ip-Y1C"/>
+                                                <constraint firstAttribute="trailing" secondItem="cGa-KQ-GjE" secondAttribute="trailing" constant="20" id="9xV-ij-Sgc"/>
+                                                <constraint firstItem="cGa-KQ-GjE" firstAttribute="leading" secondItem="mfb-dh-nOv" secondAttribute="leading" constant="20" id="msJ-lS-fwB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="R2A-OV-vCV" id="XGU-wu-8lm"/>
+                                            <outlet property="priceLabel" destination="hhF-Ds-ukk" id="xgh-FO-y8q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-Gn-6yv">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nmm-9T-U9k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="CHECKOUT">
+                                    <color key="titleColor" red="0.98545414210000004" green="0.9419024587" blue="0.89143961670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkout:" destination="2G6-1V-Mqu" eventType="touchUpInside" id="Fue-Q5-TOp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QC7-Gn-6yv" firstAttribute="bottom" secondItem="rHi-GD-WM1" secondAttribute="bottom" id="7Ip-OO-CZ3"/>
+                            <constraint firstAttribute="bottom" secondItem="Vfm-hR-Lhc" secondAttribute="bottom" id="Bkv-ck-zt9"/>
+                            <constraint firstItem="Vfm-hR-Lhc" firstAttribute="top" secondItem="HdG-G2-9s8" secondAttribute="top" id="C0c-bN-LXT"/>
+                            <constraint firstItem="QC7-Gn-6yv" firstAttribute="trailing" secondItem="rHi-GD-WM1" secondAttribute="trailing" id="DZq-QH-P5M"/>
+                            <constraint firstItem="QC7-Gn-6yv" firstAttribute="leading" secondItem="rHi-GD-WM1" secondAttribute="leading" id="Nd0-nv-1xJ"/>
+                            <constraint firstItem="rHi-GD-WM1" firstAttribute="trailing" secondItem="Vfm-hR-Lhc" secondAttribute="trailing" id="RLQ-fs-eX3"/>
+                            <constraint firstItem="Vfm-hR-Lhc" firstAttribute="leading" secondItem="rHi-GD-WM1" secondAttribute="leading" id="Ycb-6c-Dcq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rHi-GD-WM1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cart" id="uEg-c4-Qgq">
+                        <barButtonItem key="rightBarButtonItem" image="ic_drinks" id="VTl-LH-CBC">
+                            <connections>
+                                <action selector="addDrink:" destination="2G6-1V-Mqu" id="z42-oV-I6q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="checkoutButton" destination="QC7-Gn-6yv" id="h5x-cP-wpZ"/>
+                        <outlet property="drinkButton" destination="VTl-LH-CBC" id="DlS-kt-ZSo"/>
+                        <outlet property="tableView" destination="Vfm-hR-Lhc" id="1P0-DJ-Nh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHG-C6-Jau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_drinks" width="24" height="24"/>
+    </resources>
+</document>

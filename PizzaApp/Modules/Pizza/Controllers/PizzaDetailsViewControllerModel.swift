@@ -107,7 +107,11 @@ extension PizzaDetailsViewControllerModel: UITableViewDelegate, UITableViewDataS
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? PizzaCoverTableViewCell {
-            cell.coverImageView.setImage(pizza?.imageUrl)
+            if let imageUrl = pizza?.imageUrl {
+                cell.coverImageView.setImage(imageUrl)
+            } else {
+                cell.coverImageView.image = UIImage(named: "bg_wood")
+            }
         }
     }
     

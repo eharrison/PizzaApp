@@ -11,9 +11,9 @@ import UIKit
 class PizzaDetailsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
     
     var viewModel = PizzaDetailsViewControllerModel()
-    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class PizzaDetailsViewController: UIViewController {
         tableView.delegate = viewModel
         viewModel.delegate = self
         
-        title = viewModel.pizza?.name
+        title = viewModel.pizza?.name ?? "Custom Pizza"
     }
     
     override func viewWillAppear(_ animated: Bool) {

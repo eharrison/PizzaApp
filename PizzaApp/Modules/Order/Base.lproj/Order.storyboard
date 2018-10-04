@@ -107,7 +107,7 @@
                                             <outlet property="ingredientsLabel" destination="aDH-Rt-irc" id="GK3-aY-S3v"/>
                                             <outlet property="nameLabel" destination="2BV-Yb-Jw5" id="P9m-63-yGz"/>
                                             <outlet property="priceButton" destination="c70-CR-DRx" id="49p-I6-ozJ"/>
-                                            <segue destination="brC-Qe-NgN" kind="show" id="2Bn-ge-sp5"/>
+                                            <segue destination="hJB-Nk-XEp" kind="show" id="X8J-bV-95b"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="pizzaSkeleton" id="vBS-Ur-3Gs">
@@ -176,8 +176,16 @@
                         <viewLayoutGuide key="safeArea" id="Gqy-AU-fOP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nenno's Pizza" id="pfz-m6-ON1">
-                        <barButtonItem key="leftBarButtonItem" image="ic_cart_navbar" id="OLa-0Y-lXl"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mI0-Hh-kuA"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_cart_navbar" id="OLa-0Y-lXl">
+                            <connections>
+                                <segue destination="st8-7a-u6t" kind="show" id="0pj-eG-vFQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mI0-Hh-kuA">
+                            <connections>
+                                <segue destination="aKI-XT-QBk" kind="show" identifier="custom" id="QS5-Ur-ue4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="mI0-Hh-kuA" id="CLS-DG-ER4"/>
@@ -189,160 +197,33 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="124.58770614692655"/>
         </scene>
-        <!--Nenno's Pizza-->
-        <scene sceneID="ceL-tH-yCO">
+        <!--Pizza-->
+        <scene sceneID="eT4-p6-vxi">
             <objects>
-                <viewController storyboardIdentifier="PizzaDetailsViewController" id="brC-Qe-NgN" customClass="PizzaDetailsViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FQu-bz-rDO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-Ja-gvE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="ibe-2I-Bwv">
-                                    <rect key="frame" x="0.0" y="328" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cover" id="g7O-jF-aA8" customClass="PizzaCoverTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g7O-jF-aA8" id="Ncj-1N-OsX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYd-L0-D8a">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="GYd-L0-D8a" secondAttribute="bottom" id="7Ir-JL-XuF"/>
-                                                <constraint firstItem="GYd-L0-D8a" firstAttribute="leading" secondItem="Ncj-1N-OsX" secondAttribute="leading" id="CIM-wC-m8r"/>
-                                                <constraint firstItem="GYd-L0-D8a" firstAttribute="top" secondItem="Ncj-1N-OsX" secondAttribute="top" id="LjZ-MW-4Uu"/>
-                                                <constraint firstAttribute="trailing" secondItem="GYd-L0-D8a" secondAttribute="trailing" id="jNn-7M-uc4"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="coverImageView" destination="GYd-L0-D8a" id="9m0-5t-i90"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ingredientTitle" rowHeight="60" id="hhj-DJ-mz5" customClass="IngredientTitleTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hhj-DJ-mz5" id="sqm-MQ-uB4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sU-j2-Ub8">
-                                                    <rect key="frame" x="15" y="25.5" width="108" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="6as-Y7-uUM"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3sU-j2-Ub8" secondAttribute="trailing" symbolic="YES" id="Owb-ch-JNB"/>
-                                                <constraint firstAttribute="bottom" secondItem="3sU-j2-Ub8" secondAttribute="bottom" constant="10" id="Rhv-n2-3SQ"/>
-                                                <constraint firstItem="3sU-j2-Ub8" firstAttribute="leading" secondItem="sqm-MQ-uB4" secondAttribute="leading" constant="15" id="Uwf-aL-svt"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="3sU-j2-Ub8" id="nin-dj-y8Q"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ingredient" rowHeight="40" id="PiZ-fv-igf" customClass="IngredientTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="288" width="375" height="40"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PiZ-fv-igf" id="HBB-wU-2aw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zM4-Ix-KbT">
-                                                    <rect key="frame" x="20" y="10" width="335" height="20"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoTick" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-fg-XLo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="lne-yT-QlP"/>
-                                                                <constraint firstAttribute="height" constant="20" id="pJL-Gs-9hZ"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mozzarela" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R14-LZ-zvq">
-                                                            <rect key="frame" x="28" y="0.0" width="106.5" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0im-cB-3lF">
-                                                            <rect key="frame" x="142.5" y="0.0" width="192.5" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="zM4-Ix-KbT" firstAttribute="centerY" secondItem="HBB-wU-2aw" secondAttribute="centerY" id="KVN-y6-RLF"/>
-                                                <constraint firstItem="zM4-Ix-KbT" firstAttribute="leading" secondItem="HBB-wU-2aw" secondAttribute="leading" constant="20" id="m9M-Y9-Trp"/>
-                                                <constraint firstAttribute="trailing" secondItem="zM4-Ix-KbT" secondAttribute="trailing" constant="20" id="qHS-oR-b1p"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="R14-LZ-zvq" id="Iwq-z3-WQq"/>
-                                            <outlet property="priceLabel" destination="0im-cB-3lF" id="RPP-wk-h0F"/>
-                                            <outlet property="selectedImageView" destination="SOh-fg-XLo" id="bmg-yl-hMh"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkM-j6-zLf">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.69927376760000004" blue="0.16078431369999999" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zCQ-xY-XTa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="ADD TO CART ($10)">
-                                    <color key="titleColor" red="0.98545414210000004" green="0.9419024587" blue="0.89143961670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToCart:" destination="brC-Qe-NgN" eventType="touchUpInside" id="PIp-r2-kd4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bkM-j6-zLf" firstAttribute="bottom" secondItem="Daj-3X-5re" secondAttribute="bottom" id="7Rc-9b-1oG"/>
-                            <constraint firstItem="EPC-Ja-gvE" firstAttribute="top" secondItem="FQu-bz-rDO" secondAttribute="top" id="Qr8-NB-Ifh"/>
-                            <constraint firstItem="bkM-j6-zLf" firstAttribute="trailing" secondItem="Daj-3X-5re" secondAttribute="trailing" id="bzt-N9-zi9"/>
-                            <constraint firstItem="Daj-3X-5re" firstAttribute="trailing" secondItem="EPC-Ja-gvE" secondAttribute="trailing" id="fFB-2R-Hrl"/>
-                            <constraint firstAttribute="bottom" secondItem="EPC-Ja-gvE" secondAttribute="bottom" id="iDb-9W-XSi"/>
-                            <constraint firstItem="bkM-j6-zLf" firstAttribute="leading" secondItem="Daj-3X-5re" secondAttribute="leading" id="k15-jc-JDP"/>
-                            <constraint firstItem="EPC-Ja-gvE" firstAttribute="leading" secondItem="Daj-3X-5re" secondAttribute="leading" id="kb2-63-GMR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Daj-3X-5re"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Nenno's Pizza" id="lSk-dJ-9yH"/>
-                    <connections>
-                        <outlet property="addButton" destination="bkM-j6-zLf" id="ipl-nM-9Tj"/>
-                        <outlet property="tableView" destination="EPC-Ja-gvE" id="f6V-uw-zqT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xej-Wd-EYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Pizza" id="hJB-Nk-XEp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8m-ad-XnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.60000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="657" y="166"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="T1N-VU-6l1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" id="st8-7a-u6t" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c64-m6-H0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="124"/>
+        </scene>
+        <!--Pizza-->
+        <scene sceneID="67b-2B-CvN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pizza" id="aKI-XT-QBk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbz-aX-gEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="77"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_cart_button" width="24" height="24"/>
         <image name="ic_cart_navbar" width="24" height="24"/>
-        <image name="icoTick" width="157" height="116"/>
     </resources>
 </document>
