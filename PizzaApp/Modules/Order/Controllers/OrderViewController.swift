@@ -11,6 +11,8 @@ import UIKit
 class OrderViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var cartButton: UIBarButtonItem!
     
     private var viewModel = OrderViewControllerModel()
     

@@ -32,13 +32,13 @@
 		0A9E582B2164CC54004E0C36 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E582A2164CC54004E0C36 /* Order.swift */; };
 		0A9E582D2164CC5C004E0C36 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E582C2164CC5C004E0C36 /* OrderTests.swift */; };
 		0A9E582F216504AB004E0C36 /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E582E216504AB004E0C36 /* PizzaTableViewCell.swift */; };
-		0A9E583121650669004E0C36 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E583021650669004E0C36 /* OrderViewController.swift */; };
-		0A9E58342165067D004E0C36 /* OrderViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58332165067D004E0C36 /* OrderViewControllerModel.swift */; };
-		0A9E58382165C0CD004E0C36 /* PizzaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58372165C0CD004E0C36 /* PizzaDetailsViewController.swift */; };
-		0A9E583A2165C10E004E0C36 /* PizzaDetailsViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58392165C10E004E0C36 /* PizzaDetailsViewControllerModel.swift */; };
 		0A9E583C2165C3C5004E0C36 /* PizzaCoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E583B2165C3C5004E0C36 /* PizzaCoverTableViewCell.swift */; };
 		0A9E583E2165C3FB004E0C36 /* IngredientTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E583D2165C3FB004E0C36 /* IngredientTitleTableViewCell.swift */; };
 		0A9E58402165C42E004E0C36 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E583F2165C42E004E0C36 /* IngredientTableViewCell.swift */; };
+		0A9E58472165CB59004E0C36 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58432165CB59004E0C36 /* OrderViewController.swift */; };
+		0A9E58482165CB59004E0C36 /* OrderViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58442165CB59004E0C36 /* OrderViewControllerModel.swift */; };
+		0A9E58492165CB59004E0C36 /* PizzaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58452165CB59004E0C36 /* PizzaDetailsViewController.swift */; };
+		0A9E584A2165CB59004E0C36 /* PizzaDetailsViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58462165CB59004E0C36 /* PizzaDetailsViewControllerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,13 +81,13 @@
 		0A9E582A2164CC54004E0C36 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0A9E582C2164CC5C004E0C36 /* OrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		0A9E582E216504AB004E0C36 /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
-		0A9E583021650669004E0C36 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		0A9E58332165067D004E0C36 /* OrderViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewControllerModel.swift; sourceTree = "<group>"; };
-		0A9E58372165C0CD004E0C36 /* PizzaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewController.swift; sourceTree = "<group>"; };
-		0A9E58392165C10E004E0C36 /* PizzaDetailsViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewControllerModel.swift; sourceTree = "<group>"; };
 		0A9E583B2165C3C5004E0C36 /* PizzaCoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaCoverTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E583D2165C3FB004E0C36 /* IngredientTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTitleTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E583F2165C42E004E0C36 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		0A9E58432165CB59004E0C36 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		0A9E58442165CB59004E0C36 /* OrderViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewControllerModel.swift; sourceTree = "<group>"; };
+		0A9E58452165CB59004E0C36 /* PizzaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewController.swift; sourceTree = "<group>"; };
+		0A9E58462165CB59004E0C36 /* PizzaDetailsViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaDetailsViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,10 +196,7 @@
 		0A9E57ED2164C0A9004E0C36 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				0A9E583021650669004E0C36 /* OrderViewController.swift */,
-				0A9E58332165067D004E0C36 /* OrderViewControllerModel.swift */,
-				0A9E58372165C0CD004E0C36 /* PizzaDetailsViewController.swift */,
-				0A9E58392165C10E004E0C36 /* PizzaDetailsViewControllerModel.swift */,
+				0A9E58422165CB59004E0C36 /* Controllers */,
 				0A9E58322165066E004E0C36 /* Cells */,
 				0A9E57CC2164C04D004E0C36 /* Order.storyboard */,
 			);
@@ -300,6 +297,17 @@
 				0A9E583F2165C42E004E0C36 /* IngredientTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A9E58422165CB59004E0C36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A9E58432165CB59004E0C36 /* OrderViewController.swift */,
+				0A9E58442165CB59004E0C36 /* OrderViewControllerModel.swift */,
+				0A9E58452165CB59004E0C36 /* PizzaDetailsViewController.swift */,
+				0A9E58462165CB59004E0C36 /* PizzaDetailsViewControllerModel.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,21 +417,21 @@
 				0A9E58402165C42E004E0C36 /* IngredientTableViewCell.swift in Sources */,
 				0A9E58122164C401004E0C36 /* ShimmerView.swift in Sources */,
 				0A9E58172164C498004E0C36 /* Ingredient.swift in Sources */,
+				0A9E58492165CB59004E0C36 /* PizzaDetailsViewController.swift in Sources */,
 				0A9E580C2164C401004E0C36 /* AwesomeRequester.swift in Sources */,
-				0A9E583121650669004E0C36 /* OrderViewController.swift in Sources */,
 				0A9E58082164C401004E0C36 /* ObjectAssociation.swift in Sources */,
 				0A9E58242164C87A004E0C36 /* Pizza.swift in Sources */,
 				0A9E583C2165C3C5004E0C36 /* PizzaCoverTableViewCell.swift in Sources */,
-				0A9E58342165067D004E0C36 /* OrderViewControllerModel.swift in Sources */,
 				0A9E580B2164C401004E0C36 /* UIViewExtensions.swift in Sources */,
+				0A9E58472165CB59004E0C36 /* OrderViewController.swift in Sources */,
 				0A9E582B2164CC54004E0C36 /* Order.swift in Sources */,
 				0A9E58132164C401004E0C36 /* ShimmerEffect.swift in Sources */,
 				0A9E582F216504AB004E0C36 /* PizzaTableViewCell.swift in Sources */,
 				0A9E58092164C401004E0C36 /* UIViewControllerExtensions.swift in Sources */,
-				0A9E58382165C0CD004E0C36 /* PizzaDetailsViewController.swift in Sources */,
-				0A9E583A2165C10E004E0C36 /* PizzaDetailsViewControllerModel.swift in Sources */,
 				0A9E57C92164C04D004E0C36 /* AppDelegate.swift in Sources */,
 				0A9E583E2165C3FB004E0C36 /* IngredientTitleTableViewCell.swift in Sources */,
+				0A9E584A2165CB59004E0C36 /* PizzaDetailsViewControllerModel.swift in Sources */,
+				0A9E58482165CB59004E0C36 /* OrderViewControllerModel.swift in Sources */,
 				0A9E58222164C872004E0C36 /* Drink.swift in Sources */,
 				0A9E580A2164C401004E0C36 /* UIImageExtensions.swift in Sources */,
 			);

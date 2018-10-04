@@ -13,12 +13,16 @@ class PizzaDetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel = PizzaDetailsViewControllerModel()
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = viewModel
         tableView.delegate = viewModel
+        viewModel.delegate = self
+        
+        title = viewModel.pizza?.name
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,4 +37,18 @@ class PizzaDetailsViewController: UIViewController {
         
     }
     
+    // MARK: - Events
+    
+    @IBAction func addToCart(_ sender: Any) {
+    }
+    
+}
+
+// MARK: - PizzaDetailsViewControllerModelDelegate
+
+extension PizzaDetailsViewController: PizzaDetailsViewControllerModelDelegate {
+    
+    func priceUpdated(_ price: Double) {
+        addButton.setTitle("ADD TO CART ($\(price))", for: .normal)
+    }
 }

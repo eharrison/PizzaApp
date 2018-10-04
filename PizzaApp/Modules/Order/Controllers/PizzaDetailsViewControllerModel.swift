@@ -27,7 +27,7 @@ fileprivate struct PizzaDetailsCellObject {
 }
 
 protocol PizzaDetailsViewControllerModelDelegate: class {
-    func dataRequestFailed(_ error: Error)
+    func priceUpdated(_ price: Double)
 }
 
 public class PizzaDetailsViewControllerModel: NSObject {
@@ -41,6 +41,8 @@ public class PizzaDetailsViewControllerModel: NSObject {
     
     func refreshContent(withTableView tableView: UITableView) {
         reloadContent(tableView)
+        
+        delegate?.priceUpdated(pizzaPrice)
     }
     
     fileprivate func reloadContent(_ tableView: UITableView) {
@@ -63,6 +65,20 @@ public class PizzaDetailsViewControllerModel: NSObject {
         return cells
     }
     
+    var selectedIngredientsPrice: Double {
+        var price: Double = 0
+        
+        for cell in cells where cell.selected {
+            price += cell.ingredient?.price ?? 0
+        }
+        
+        return price
+    }
+    
+    var pizzaPrice: Double {
+        return (pizzaPayload?.basePrice ?? 0) + selectedIngredientsPrice
+    }
+    
 }
 
 // MARK: - Table view data source
@@ -83,7 +99,7 @@ extension PizzaDetailsViewControllerModel: UITableViewDelegate, UITableViewDataS
         if let cell = cell as? IngredientTableViewCell {
             cell.nameLabel.text = cells[indexPath.row].ingredient?.name
             cell.priceLabel.text = "$\(cells[indexPath.row].ingredient?.price ?? 0)"
-            cell.selectedImageView.isHidden = !cells[indexPath.row].selected
+            cell.selectedImageView.alpha = cells[indexPath.row].selected ? 1 : 0
         }
         
         return cell
@@ -98,7 +114,9 @@ extension PizzaDetailsViewControllerModel: UITableViewDelegate, UITableViewDataS
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if cells[indexPath.row].type == .ingredient {
             cells[indexPath.row].selected = !cells[indexPath.row].selected
-            tableView.reloadData()
+            tableView.reloadRows(at: [indexPath], with: .fade)
+            
+            delegate?.priceUpdated(pizzaPrice)
         }
     }
     
