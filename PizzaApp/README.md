@@ -3,6 +3,7 @@
 ## Features
 - Shows List of pizzas available
 - Allows Customizing pizza
+- Allows Editing pizza before checking out
 - Cart Management
 - Lazy loading with Skeleton content
 - Shimmering effect when loading images
@@ -32,6 +33,3 @@ Added basic unit tests for model parsing and checking if URL is correct. They ar
 - **Not possible to choose Drinks.** I added the services for Drinks, but didn't build the UI for it. Currently all I'm presenting is a message.
 - **Order POST doesn't work**, seems like the service is not existent. In this case, I'm taking it as successful anyways for demonstration purposes.
 - **Not persisting data accross launches.** This could be easily accomplished with local storage. Either UserDefaults or CoreData. Quick approach would be using UserDefaults by saving parsed Data.
-
-
-- **Not possible to edit requests.** In this case, ideally we should have an api request for all orders, and then edit 
