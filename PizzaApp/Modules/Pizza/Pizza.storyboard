@@ -137,6 +137,20 @@
                                     <segue destination="ice-eA-NWV" kind="unwind" unwindAction="addedToCart:" id="cju-YA-bMC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-8i-eDZ">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.69927376760000004" blue="0.16078431369999999" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mmk-Cs-wTs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="CHANGE ORDER ($10)">
+                                    <color key="titleColor" red="0.98545414210000004" green="0.9419024587" blue="0.89143961670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeOrder:" destination="SFv-xi-7zZ" eventType="touchUpInside" id="G5m-hC-bbX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -144,15 +158,19 @@
                             <constraint firstItem="eyg-yi-M8Q" firstAttribute="leading" secondItem="Tfd-Y9-buT" secondAttribute="leading" id="Dau-VC-OlK"/>
                             <constraint firstItem="dJb-Rt-pRV" firstAttribute="top" secondItem="LjY-xk-1xr" secondAttribute="top" id="E2v-zw-ILI"/>
                             <constraint firstItem="eyg-yi-M8Q" firstAttribute="bottom" secondItem="Tfd-Y9-buT" secondAttribute="bottom" id="HJL-9l-0AS"/>
+                            <constraint firstItem="Tfd-Y9-buT" firstAttribute="bottom" secondItem="2gK-8i-eDZ" secondAttribute="bottom" id="Mzf-ma-NFJ"/>
+                            <constraint firstItem="2gK-8i-eDZ" firstAttribute="leading" secondItem="Tfd-Y9-buT" secondAttribute="leading" id="Nmj-tk-jIR"/>
                             <constraint firstItem="dJb-Rt-pRV" firstAttribute="leading" secondItem="Tfd-Y9-buT" secondAttribute="leading" id="ZiL-e4-7Ef"/>
                             <constraint firstItem="eyg-yi-M8Q" firstAttribute="trailing" secondItem="Tfd-Y9-buT" secondAttribute="trailing" id="j9y-rQ-stc"/>
                             <constraint firstAttribute="bottom" secondItem="dJb-Rt-pRV" secondAttribute="bottom" id="ooJ-UQ-juh"/>
+                            <constraint firstItem="2gK-8i-eDZ" firstAttribute="trailing" secondItem="Tfd-Y9-buT" secondAttribute="trailing" id="rS7-yy-xbs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tfd-Y9-buT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nenno's Pizza" id="56q-Zq-1Kb"/>
                     <connections>
                         <outlet property="addButton" destination="eyg-yi-M8Q" id="ccH-bB-ipu"/>
+                        <outlet property="changeButton" destination="2gK-8i-eDZ" id="xEm-WH-WSQ"/>
                         <outlet property="tableView" destination="dJb-Rt-pRV" id="o2L-tP-gwk"/>
                     </connections>
                 </viewController>

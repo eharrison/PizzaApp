@@ -74,6 +74,7 @@
                                             <outlet property="deleteButton" destination="jmo-I5-URt" id="IsA-j0-89B"/>
                                             <outlet property="nameLabel" destination="Hgx-3b-qx3" id="Mn2-UE-Sd8"/>
                                             <outlet property="priceLabel" destination="6Zi-iW-7v3" id="yUZ-7M-QnZ"/>
+                                            <segue destination="CyF-ol-Qmg" kind="show" id="wbX-1F-NMa"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="total" rowHeight="60" id="chg-aD-IEA" customClass="CartTotalTableViewCell" customModule="PizzaApp" customModuleProvider="target">
@@ -158,6 +159,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHG-C6-Jau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="805.60000000000002" y="124.58770614692655"/>
+        </scene>
+        <!--Pizza-->
+        <scene sceneID="LYT-am-Cfi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pizza" id="CyF-ol-Qmg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojH-fD-MWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="124"/>
         </scene>
     </scenes>
     <resources>

@@ -36,9 +36,18 @@ public class PizzaDetailsViewControllerModel: NSObject {
     var pizzaPayload: PizzaPayload?
     var pizza: Pizza?
     var ingredients: [Ingredient] = []
+    var cartItem: CartItem? {
+        didSet {
+            self.pizza = cartItem?.object as? Pizza
+        }
+    }
     
     var title: String {
         return pizza?.name ?? "Custom Pizza"
+    }
+    
+    var isEditing: Bool {
+        return cartItem != nil
     }
     
     weak var delegate: PizzaDetailsViewControllerModelDelegate?
@@ -63,7 +72,11 @@ public class PizzaDetailsViewControllerModel: NSObject {
         
         // add cells
         for ingredient in ingredients {
-            cells.append(PizzaDetailsCellObject(type: .ingredient, ingredient: ingredient, selected: pizza?.hasIngredient(withId: ingredient.id) ?? false))
+            if let cartItem = cartItem {
+                cells.append(PizzaDetailsCellObject(type: .ingredient, ingredient: ingredient, selected: cartItem.hasIngredient(withId: ingredient.id)))
+            } else {
+                cells.append(PizzaDetailsCellObject(type: .ingredient, ingredient: ingredient, selected: pizza?.hasIngredient(withId: ingredient.id) ?? false))
+            }
         }
         
         return cells
@@ -96,7 +109,15 @@ public class PizzaDetailsViewControllerModel: NSObject {
     }
     
     func addToCart() {
-        Cart.shared.items.append(CartItem(name: title, price: pizzaPrice, object: pizza, ingredients: ingredients))
+        Cart.shared.add(itemWithName: title, price: pizzaPrice, object: pizza, ingredients: selectedIngredients)
+    }
+    
+    func changeOrder() {
+        guard let cartItem = cartItem else {
+            return
+        }
+        
+        Cart.shared.edit(item: cartItem, name: title, price: pizzaPrice, object: pizza, ingredients: selectedIngredients)
     }
     
 }

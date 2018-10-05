@@ -58,6 +58,9 @@ public class CartViewControllerModel: NSObject {
         return cells
     }
     
+    func item(forIndexPath indexPath: IndexPath) -> CartItem? {
+        return cells[indexPath.row].item
+    }
 }
 
 // MARK: - Table view data source
@@ -79,7 +82,7 @@ extension CartViewControllerModel: UITableViewDelegate, UITableViewDataSource {
             cell.nameLabel.text = cells[indexPath.row].item?.name
             cell.priceLabel.text = "$\(cells[indexPath.row].item?.price ?? 0)"
             cell.deleteCallback = { [weak self] in
-                Cart.shared.items.remove(at: indexPath.row)
+                Cart.shared.remove(itemWithPosition: indexPath.row)
                 self?.refreshContent(withTableView: tableView)
             }
         } else if let cell = cell as? CartTotalTableViewCell {

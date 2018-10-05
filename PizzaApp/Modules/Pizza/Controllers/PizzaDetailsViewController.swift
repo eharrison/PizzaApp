@@ -12,6 +12,7 @@ class PizzaDetailsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var changeButton: UIButton!
     
     var viewModel = PizzaDetailsViewControllerModel()
     
@@ -23,6 +24,7 @@ class PizzaDetailsViewController: UIViewController {
         viewModel.delegate = self
         
         title = viewModel.title
+        updateState()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +35,18 @@ class PizzaDetailsViewController: UIViewController {
     
     // MARK: - Events
     
+    private func updateState() {
+        addButton.isHidden = viewModel.isEditing
+        changeButton.isHidden = !viewModel.isEditing
+    }
+    
     @IBAction func addToCart(_ sender: Any) {
         viewModel.addToCart()
+    }
+    
+    @IBAction func changeOrder(_ sender: Any) {
+        viewModel.changeOrder()
+        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -45,5 +57,6 @@ extension PizzaDetailsViewController: PizzaDetailsViewControllerModelDelegate {
     
     func priceUpdated(_ price: Double) {
         addButton.setTitle("ADD TO CART ($\(price))", for: .normal)
+        changeButton.setTitle("UPDATE ORDER ($\(price))", for: .normal)
     }
 }
