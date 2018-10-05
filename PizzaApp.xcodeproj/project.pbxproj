@@ -104,6 +104,7 @@
 		0A9E585B2165EA72004E0C36 /* CartTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E585E2165EBA2004E0C36 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		0A9E586021671470004E0C36 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
+		0A9E586221671514004E0C36 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +200,7 @@
 			children = (
 				0A9E57C82164C04D004E0C36 /* AppDelegate.swift */,
 				0A9E57D42164C04E004E0C36 /* Info.plist */,
+				0A9E586221671514004E0C36 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

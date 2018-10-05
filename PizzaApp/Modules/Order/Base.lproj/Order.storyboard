@@ -60,7 +60,7 @@
                                                         <constraint firstAttribute="height" priority="750" constant="131.5" id="cwK-n7-2sb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c70-CR-DRx">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c70-CR-DRx">
                                                     <rect key="frame" x="294" y="160.5" width="61" height="24"/>
                                                     <color key="backgroundColor" red="1" green="0.69927376760563376" blue="0.16078431372549018" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
