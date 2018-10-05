@@ -27,6 +27,8 @@ class OrderViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
+        
+        cartButton.addBadge(number: Cart.shared.items.count)
     }
     
     // MARK: - Navigation

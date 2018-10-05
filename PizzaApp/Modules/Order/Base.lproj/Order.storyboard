@@ -57,9 +57,18 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ook-5x-e8P">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="131.5" id="cwK-n7-2sb"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="131.5" id="cwK-n7-2sb"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c70-CR-DRx">
+                                                    <rect key="frame" x="294" y="160.5" width="61" height="24"/>
+                                                    <color key="backgroundColor" red="1" green="0.69927376760563376" blue="0.16078431372549018" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <state key="normal" title="$10 " image="ic_cart_button"/>
+                                                    <connections>
+                                                        <action selector="addToCart:" destination="fw2-kp-jLk" eventType="touchUpInside" id="87j-xd-vKe"/>
+                                                    </connections>
+                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="30W-nI-R1C">
                                                     <rect key="frame" x="20" y="139.5" width="266" height="45"/>
                                                     <subviews>
@@ -80,23 +89,14 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c70-CR-DRx">
-                                                    <rect key="frame" x="294" y="160.5" width="61" height="24"/>
-                                                    <color key="backgroundColor" red="1" green="0.69927376760563376" blue="0.16078431372549018" alpha="0.89708956870000001" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <state key="normal" title="$10 " image="ic_cart_button"/>
-                                                    <connections>
-                                                        <action selector="addToCart:" destination="fw2-kp-jLk" eventType="touchUpInside" id="87j-xd-vKe"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ook-5x-e8P" firstAttribute="leading" secondItem="dg1-hg-PN1" secondAttribute="leading" id="4Co-Lt-7RG"/>
                                                 <constraint firstItem="30W-nI-R1C" firstAttribute="leading" secondItem="dg1-hg-PN1" secondAttribute="leading" constant="20" id="BYy-O2-2Hp"/>
+                                                <constraint firstAttribute="bottom" secondItem="30W-nI-R1C" secondAttribute="bottom" constant="15" id="K21-Ur-Mi4"/>
                                                 <constraint firstItem="c70-CR-DRx" firstAttribute="leading" secondItem="30W-nI-R1C" secondAttribute="trailing" constant="8" id="P9g-2H-1QV"/>
                                                 <constraint firstAttribute="trailing" secondItem="c70-CR-DRx" secondAttribute="trailing" constant="20" id="Plr-xy-x5r"/>
                                                 <constraint firstItem="Ook-5x-e8P" firstAttribute="top" secondItem="dg1-hg-PN1" secondAttribute="top" id="S9k-Ux-UjC"/>
-                                                <constraint firstAttribute="bottom" secondItem="c70-CR-DRx" secondAttribute="bottom" constant="15" id="XJ7-cg-BUd"/>
                                                 <constraint firstItem="30W-nI-R1C" firstAttribute="bottom" secondItem="c70-CR-DRx" secondAttribute="bottom" id="ZFi-aO-2wb"/>
                                                 <constraint firstItem="30W-nI-R1C" firstAttribute="top" secondItem="Ook-5x-e8P" secondAttribute="bottom" constant="8" id="b0W-6s-dxO"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ook-5x-e8P" secondAttribute="trailing" id="nmK-fd-4lp"/>
@@ -121,7 +121,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
                                                     <color key="backgroundColor" white="0.90000000000000002" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="131.5" id="UQk-ii-WOK"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="131.5" id="UQk-ii-WOK"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-F7-dVW">

@@ -46,6 +46,7 @@
 		0A9E585A2165E77A004E0C36 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E58592165E77A004E0C36 /* CartItemTableViewCell.swift */; };
 		0A9E585C2165EA72004E0C36 /* CartTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E585B2165EA72004E0C36 /* CartTotalTableViewCell.swift */; };
 		0A9E585F2165EBA2004E0C36 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E585E2165EBA2004E0C36 /* Cart.swift */; };
+		0A9E586121671470004E0C36 /* UIBarButtonItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E586021671470004E0C36 /* UIBarButtonItemExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		0A9E58592165E77A004E0C36 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E585B2165EA72004E0C36 /* CartTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalTableViewCell.swift; sourceTree = "<group>"; };
 		0A9E585E2165EBA2004E0C36 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		0A9E586021671470004E0C36 /* UIBarButtonItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				0A9E57F92164C401004E0C36 /* UIViewControllerExtensions.swift */,
 				0A9E57FA2164C401004E0C36 /* UIImageExtensions.swift */,
 				0A9E57FB2164C401004E0C36 /* UIViewExtensions.swift */,
+				0A9E586021671470004E0C36 /* UIBarButtonItemExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				0A9E58132164C401004E0C36 /* ShimmerEffect.swift in Sources */,
 				0A9E582F216504AB004E0C36 /* PizzaTableViewCell.swift in Sources */,
 				0A9E58092164C401004E0C36 /* UIViewControllerExtensions.swift in Sources */,
+				0A9E586121671470004E0C36 /* UIBarButtonItemExtensions.swift in Sources */,
 				0A9E57C92164C04D004E0C36 /* AppDelegate.swift in Sources */,
 				0A9E585C2165EA72004E0C36 /* CartTotalTableViewCell.swift in Sources */,
 				0A9E583E2165C3FB004E0C36 /* IngredientTitleTableViewCell.swift in Sources */,
